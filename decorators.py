@@ -1,4 +1,5 @@
 from datetime import datetime
+
 def timer(funk):
     def wrapper(*args, **kwargs):
         start = datetime.now()
@@ -6,6 +7,7 @@ def timer(funk):
         print(datetime.now() - start)
         return res
     return wrapper
+
 @timer
 def solution(number):
     x = 0
@@ -13,7 +15,6 @@ def solution(number):
        if i %3 ==0 or  i% 5==0:
            x += i
     return(x)
-
 
 @timer
 def solution1(number):
